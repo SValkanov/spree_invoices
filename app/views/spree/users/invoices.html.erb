@@ -1,0 +1,28 @@
+<div class='columns small-12 medium-3'>
+  <%= render :partial => 'spree/shared/user_sub_menu' %>
+</div>
+<div class='columns small-12 medium-9'>
+  <h1><%= Spree.t(:invoices) %></h1>
+  <%= render :partial => 'spree/shared/error_messages', locals: { target: @invoice } %>
+  <div class='columns small-12 medium-6 '>
+    <div class="panel-body-custom">
+      <%= form_for @invoice, url: '/account/invoices', method: :put do |f| %>
+      <div class="form-group">
+        <%= f.label :company_name, Spree.t(:company_name) %>
+        <%= f.text_field :company_name, class: 'form-control' %>
+        <%= f.label :nsn, Spree.t(:nsn) %>
+        <%= f.text_field :nsn, class: 'form-control' %>
+        <%= f.label :tax_registry_number, Spree.t(:tax_registry_number) %>
+        <%= f.text_field :tax_registry_number, class: 'form-control' %>
+        <%= f.label :address, Spree.t(:address) %>
+        <%= f.text_field :address, class: 'form-control' %>
+        <%= f.label :city, Spree.t(:city) %>
+        <%= f.text_field :city, class: 'form-control' %>
+      </div>
+        <p>
+          <%= f.submit Spree.t(:update), class: 'button primary' %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>

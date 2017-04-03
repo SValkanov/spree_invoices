@@ -1,0 +1,20 @@
+bg:
+  activerecord:
+    attributes:
+      invoice:
+        nsn: 'ЕИК'
+        company_name: 'Име на фирма'
+        tax_registry_number: 'Данъчен номер'
+        address: 'Адрес'
+        city: 'Град'
+  spree:
+    edit_your_invoice: 'Редактирай своята фактура'
+    create_invoice: 'Създай фактура'
+    invoice: 'Фактура'
+    tax_number_and_nsn_error: 'Трябва да бъде попълнено само ЕИК или Данъчен номер'
+    invoice_updated: 'Фактурата бе обновена'
+    invoices: 'Фактури'
+    company_name: 'Име на фирма'
+    nsn: 'ЕИК'
+    tax_registry_number: 'Данъчен номер'
+    address: 'Адрес'

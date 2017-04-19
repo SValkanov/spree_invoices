@@ -21,6 +21,8 @@ Deface::Override.new(virtual_path: "spree/orders/edit",
             <%= order_form.text_field :nsn, value: @invoice.nsn %>
             <label id="order_tax_label"><%= Spree.t("tax_registry_number") %></label>
             <%= order_form.text_field :tax_registry_number, value: @invoice.tax_registry_number %>
+            <label id="order_mol_label"><%= Spree.t("mol") %></label>
+            <%= order_form.text_field :mol, value: @invoice.mol %>
             <label id="order_address_label"><%= Spree.t("address") %></label>
             <%= order_form.text_field :address, value: @invoice.address %>
             <label id="order_city_label"><%= Spree.t("city") %></label>
@@ -32,6 +34,8 @@ Deface::Override.new(virtual_path: "spree/orders/edit",
             <%= order_form.text_field :nsn %>
             <label id="order_tax_label"><%= Spree.t("tax_registry_number") %></label>
             <%= order_form.text_field :tax_registry_number %>
+            <label id="order_mol_label"><%= Spree.t("mol") %></label>
+            <%= order_form.text_field :mol %>
             <label id="order_address_label"><%= Spree.t("address") %></label>
             <%= order_form.text_field :address %>
             <label id="order_city_label"><%= Spree.t("city") %></label>

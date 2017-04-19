@@ -12,7 +12,9 @@ $(document).ready(function(){
   var city = document.getElementById('order_city');
   var tax_number = document.getElementById('order_tax_registry_number')
   var tax_number_label = document.getElementById('order_tax_label');
-  var elements = [company_name, nsn, address, city, comapany_name_label, nsn_label, address_label, city_label, tax_number, tax_number_label];
+  var mol = document.getElementById('order_mol');
+  var mol_label = document.getElementById('order_mol_label');
+  var elements = [company_name, nsn, address, city, comapany_name_label, nsn_label, address_label, city_label, tax_number, tax_number_label, mol, mol_label];
   if (checkbox.checked){
     showInvoiceFields(elements);
   }else{

@@ -17,6 +17,6 @@ Spree::UsersController.class_eval do
   private
 
   def invoice_params
-    params.require(:invoice).permit(:invoice, :company_name, :nsn, :address, :city, :tax_registry_number)
+    params.require(:invoice).permit(:invoice, :company_name, :nsn, :address, :city, :tax_registry_number, :mol)
   end
 end

@@ -7,6 +7,7 @@ bg:
         tax_registry_number: 'Данъчен номер'
         address: 'Адрес'
         city: 'Град'
+        mol: 'МОЛ'
   spree:
     edit_your_invoice: 'Редактирай своята фактура'
     create_invoice: 'Създай фактура'

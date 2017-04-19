@@ -10,6 +10,7 @@ en:
         tax_registry_number: 'Tax number'
         address: 'Address'
         city: 'City'
+        mol: 'MOL'
   spree:
     tax_number_and_nsn_error: Only one field should be filled 'Тax registry number' Or 'UIC'
     invoice_updated: 'Invoice was successfully updated'

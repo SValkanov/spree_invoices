@@ -9,6 +9,7 @@ Spree::OrdersController.class_eval do
         @invoice.city = @order.city
         @invoice.nsn = @order.nsn
         @invoice.tax_registry_number = @order.tax_registry_number
+        @invoice.mol = @order.mol
         @invoice.save
       end
       respond_with(@order) do |format|
@@ -42,7 +43,7 @@ Spree::OrdersController.class_eval do
 
   def order_params
     if params[:order]
-      params[:order].permit(*permitted_order_attributes, :invoice, :company_name, :nsn, :address, :city, :tax_registry_number)
+      params[:order].permit(*permitted_order_attributes, :invoice, :company_name, :nsn, :address, :city, :tax_registry_number, :mol)
     else
       {}
     end

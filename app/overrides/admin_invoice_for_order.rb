@@ -7,6 +7,7 @@ Deface::Override.new(virtual_path: "spree/admin/orders/_line_items",
   <h4>Invoice details</h4>
   <p>company_name: <%=order.company_name%></p>
   <p>nsn: <%=order.nsn%></p>
+  <p>mol: <%=order.mol%></p>
   <p>tax_registry_number: <%= order.tax_registry_number %></p>
   <p>address: <%=order.address%></p>
   <p>city: <%=order.city%></p>

@@ -5,7 +5,7 @@ SpreeInvoices
 
 1. Add this extension to your Gemfile with this line:
   ```ruby
-  gem 'spree_invoices', github: 'https://github.com/SValkanov/spree_invoices', branch: '3-1-stable'
+  gem 'spree_invoices', git: 'https://github.com/SValkanov/spree_invoices', branch: '3-1-stable'
   ```
 
 2. Install the gem using Bundler:

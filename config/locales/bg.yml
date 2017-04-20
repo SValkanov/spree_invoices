@@ -19,3 +19,4 @@ bg:
     nsn: 'ЕИК'
     tax_registry_number: 'Данъчен номер'
     address: 'Адрес'
+    mol: 'МОЛ'

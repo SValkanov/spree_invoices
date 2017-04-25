@@ -34,6 +34,11 @@ Spree::OrdersController.class_eval do
     associate_user
     if spree_current_user
       @invoice = Invoice.find_by(user: spree_current_user)
+      @order.company_name = @invoice.company_name
+      @order.address = @invoice.address
+      @order.city = @invoice.city
+      @order.mol = @invoice.mol
+      @order.urn = @invoice.tax_number
     else
       @invoice = Invoice.new
     end

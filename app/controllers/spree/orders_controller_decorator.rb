@@ -38,7 +38,8 @@ Spree::OrdersController.class_eval do
       @order.address = @invoice.address
       @order.city = @invoice.city
       @order.mol = @invoice.mol
-      @order.urn = @invoice.tax_number
+      @order.nsn = @invoice.nsn
+      @order.tax_registry_number = @invoice.tax_registry_number
     else
       @invoice = Invoice.new
     end

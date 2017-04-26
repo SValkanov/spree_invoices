@@ -32,19 +32,14 @@ Spree::OrdersController.class_eval do
                             includes(line_items: [variant: [:images, :option_values, :product]]).
                             find_or_initialize_by(guest_token: cookies.signed[:guest_token])
     associate_user
-    if spree_current_user
-      @invoice = Invoice.find_by(user: spree_current_user)
-      @order.company_name = @invoice.company_name
-      @order.address = @invoice.address
-      @order.city = @invoice.city
-      @order.mol = @invoice.mol
-      @order.nsn = @invoice.nsn
-      @order.tax_registry_number = @invoice.tax_registry_number
-    else
-      @invoice = Invoice.new
-    end
+    @invoice = Invoice.where(user: spree_current_user).first_or_initialize
+    @order.company_name = @invoice.company_name
+    @order.address = @invoice.address
+    @order.city = @invoice.city
+    @order.mol = @invoice.mol
+    @order.nsn = @invoice.nsn
+    @order.tax_registry_number = @invoice.tax_registry_number
   end
-
   private
 
   def order_params
